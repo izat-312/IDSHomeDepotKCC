@@ -1,0 +1,75 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Check Gift Cards Page",
+        "description": "",
+        "id": "test-homedepot-giftcard-page;check-gift-cards-page",
+        "after": [
+          {
+            "result": {
+              "duration": 1529699254,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.after(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2468937952,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Open chrome and start application",
+            "match": {
+              "location": "HomeDepotLoginSteps.open_chrome_and_start_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 22006318936,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "click gift card button",
+            "match": {
+              "location": "GiftCardSteps.click_gift_card_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 111139258,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "gift card page should be open",
+            "match": {
+              "location": "GiftCardSteps.gift_card_page_should_be_open()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@gifts"
+          }
+        ]
+      }
+    ],
+    "name": "Test HomeDepot GiftCard page",
+    "description": "",
+    "id": "test-homedepot-giftcard-page",
+    "keyword": "Feature",
+    "uri": "src/test/Resources/features/GiftCardsPage.feature",
+    "tags": []
+  }
+]

@@ -1,0 +1,15 @@
+<suite name="homedepot">
+    <test name="pages">
+        <classes>
+            <class name="Runners.HomeDepotLoginRunner">
+
+            </class>
+            <class name="Runners.GiftCardRunner">
+
+            </class>
+            <class name="Runners.SearchResultRunner">
+
+            </class>
+        </classes>
+    </test>
+</suite>
