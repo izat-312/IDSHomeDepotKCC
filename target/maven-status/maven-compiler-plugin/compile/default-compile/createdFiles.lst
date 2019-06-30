@@ -1,0 +1,9 @@
+utils/Waits.class
+pages/LogInPage.class
+pages/ProfestionalContractorPage.class
+utils/PropertyReader.class
+pages/SearchResultPage.class
+pages/HomePage.class
+utils/Driver.class
+pages/SignInPage.class
+pages/GiftCardsPage.class

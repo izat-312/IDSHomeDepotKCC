@@ -1,0 +1,10 @@
+<suite name="homedepot">
+    <parameter name="URL" value="https://www.homedepot.com/"/>
+    <test name="pages">
+        <classes>
+            <class name="SmokeTest">
+                <exclude name="searchFuncTest"/>
+            </class>
+        </classes>
+    </test>
+</suite>
