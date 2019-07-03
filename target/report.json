@@ -1,0 +1,71 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Test login with invalid credentials",
+        "description": "",
+        "id": "test-home-depot-smoke-scenario;test-login-with-invalid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 14024115630,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Open chrome and start application",
+            "match": {
+              "location": "HomeDepotSteps.open_chrome_and_start_application()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1394318536,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "i click my account button than sign in button",
+            "match": {
+              "location": "HomeDepotSteps.i_click_my_account_button_than_sign_in_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2405198705,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "i enter invalid username password and click log in",
+            "match": {
+              "location": "HomeDepotSteps.i_enter_invalid_username_password_and_click_log_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 33817367,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user should not be able to log in",
+            "match": {
+              "location": "HomeDepotSteps.user_should_not_be_able_to_log_in()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Test Home Depot smoke scenario",
+    "description": "",
+    "id": "test-home-depot-smoke-scenario",
+    "keyword": "Feature",
+    "uri": "src/test/Resources/features/HomeDepotLogIn.feature",
+    "tags": []
+  }
+]
