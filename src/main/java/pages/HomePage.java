@@ -62,7 +62,7 @@ public class HomePage {
 
     public void myAccount(){
         myAccount.click();
-        WebDriverWait wait = new WebDriverWait(driver, 2);
+        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(signIn)).click();
     }
 
