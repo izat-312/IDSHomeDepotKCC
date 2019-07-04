@@ -43,7 +43,8 @@ public class HomePage {
 
 
     public void clickGiftCard(){
-        giftCard.click();
+        WebDriverWait wait = new WebDriverWait(driver,3);
+        wait.until(ExpectedConditions.elementToBeClickable(giftCard)).click();
     }
 
     public void search(String searchValue){

@@ -20,6 +20,7 @@ public class HomeDepotSteps {
     WebDriver driver;
     LogInPage logInPage;
 
+
     @Given("Open chrome and start application")
     public void open_chrome_and_start_application() {
         driver= Driver.getDriver("chrome");
@@ -27,16 +28,16 @@ public class HomeDepotSteps {
         driver.get(PropertyReader.getValue("homedepoturl"));
     }
 
-    @When("i click my account button than sign in button")
-    public void i_click_my_account_button_than_sign_in_button() {
+    @When("i click my account button and sign in button")
+    public void i_click_my_account_button_and_sign_in_button() {
         logInPage = new LogInPage(driver);
         logInPage.myAccount();
     }
 
-    @Then("i enter invalid username password and click log in")
-    public void i_enter_invalid_username_password_and_click_log_in() {
+    @Then("i enter username (.+) and password (.+) and click log in")
+    public void i_enter_username_and_password_and_click_log_in(String string, String string2) {
 
-        logInPage.loginInvalidAccountTest("manas@gmail.com","bishkek312");
+        logInPage.loginInvalidAccountTest(string,string2);
     }
 
     @And("user should not be able to log in")
@@ -47,6 +48,5 @@ public class HomeDepotSteps {
         } else {
             Assert.assertFalse(false,"It is logged in");
         }
-
     }
 }

@@ -1,0 +1,12 @@
+<suite name="homedepot">
+    <test name="pages">
+        <classes>
+            <class name="Runners.HomeDepotRunner">
+
+            </class>
+            <class name="Runners.GiftCardRunner">
+
+            </class>
+        </classes>
+    </test>
+</suite>

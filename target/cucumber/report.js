@@ -1,50 +1,35 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/Resources/features/HomeDepotLogIn.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/Resources/features/GiftCardsPage.feature");
 formatter.feature({
-  "name": "Test Home Depot smoke scenario",
+  "name": "Test HomeDepot GiftCard page",
   "description": "",
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Test login with invalid credentials",
+  "name": "Check Gift Cards Page",
   "description": "",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@gifts"
+    }
+  ]
 });
 formatter.step({
-  "name": "Open chrome and start application",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "HomeDepotSteps.open_chrome_and_start_application()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "i click my account button than sign in button",
+  "name": "click gift card button",
   "keyword": "When "
 });
 formatter.match({
-  "location": "HomeDepotSteps.i_click_my_account_button_than_sign_in_button()"
+  "location": "GiftCardSteps.click_gift_card_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "i enter invalid username password and click log in",
+  "name": "gift card page should be open",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "HomeDepotSteps.i_enter_invalid_username_password_and_click_log_in()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user should not be able to log in",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "HomeDepotSteps.user_should_not_be_able_to_log_in()"
+  "location": "GiftCardSteps.gift_card_page_should_be_open()"
 });
 formatter.result({
   "status": "passed"
