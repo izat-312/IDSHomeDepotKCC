@@ -6,8 +6,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
 
+    public static WebDriver driver;
     private Driver (){}
 
+    public static WebDriver getMyCurrentDriver(String browser){
+        if(driver == null) getDriver(browser);
+        return driver;
+    }
     public static WebDriver getDriver( String browserType ){
         System.setProperty("webdriver.chrome.driver", PropertyReader.getValue("chromeDriverPath"));
         System.setProperty("webdriver.gecko.driver", "/Users/izatillaaitmatov/Documents/workspace/geckodriver");

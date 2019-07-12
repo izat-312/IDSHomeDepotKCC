@@ -15,7 +15,7 @@ import utils.PropertyReader;
 
 import java.util.concurrent.TimeUnit;
 
-public class HomeDepotSteps {
+public class HomeDepotLoginSteps {
 
     WebDriver driver;
     LogInPage logInPage;
@@ -25,11 +25,11 @@ public class HomeDepotSteps {
     public void open_chrome_and_start_application() {
         driver= Driver.getDriver("chrome");
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        driver.get(PropertyReader.getValue("homedepoturl"));
     }
 
     @When("i click my account button and sign in button")
     public void i_click_my_account_button_and_sign_in_button() {
+        driver.get(PropertyReader.getValue("homedepoturl"));
         logInPage = new LogInPage(driver);
         logInPage.myAccount();
     }

@@ -4,49 +4,84 @@
     "elements": [
       {
         "line": 4,
-        "name": "Check Gift Cards Page",
-        "description": "",
-        "id": "test-homedepot-giftcard-page;check-gift-cards-page",
+        "name": "Click Home service Under \"HOW DOERS GET MORE DONE\"",
+        "description": "  than open Door installation page",
+        "id": "home-service;click-home-service-under-\"how-doers-get-more-done\"",
+        "after": [
+          {
+            "result": {
+              "duration": 1639273008,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.after(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 11839347426,
+              "duration": 15991440431,
               "status": "passed"
             },
-            "line": 5,
-            "name": "click gift card button",
+            "line": 7,
+            "name": "User goes to the main Home Depot page",
             "match": {
-              "location": "GiftCardSteps.click_gift_card_button()"
+              "location": "HomeServiceDoorInstallationSteps.user_goes_to_the_main_Home_Depot_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3722106227,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user scroll down click Home service",
+            "match": {
+              "location": "HomeServiceDoorInstallationSteps.user_scroll_down_click_Home_service()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1411842849,
+              "duration": 3018760565,
               "status": "passed"
             },
-            "line": 6,
-            "name": "gift card page should be open",
+            "line": 9,
+            "name": "under services click Door Hardware Installation",
             "match": {
-              "location": "GiftCardSteps.gift_card_page_should_be_open()"
+              "location": "HomeServiceDoorInstallationSteps.under_services_click_Door_Hardware_Installation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5071321208,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "validate user on Door Hardware Installation page",
+            "match": {
+              "location": "HomeServiceDoorInstallationSteps.validate_user_on_Door_Hardware_Installation_page()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@gifts"
+            "name": "@homeservice"
           }
         ]
       }
     ],
-    "name": "Test HomeDepot GiftCard page",
+    "name": "Home service",
     "description": "",
-    "id": "test-homedepot-giftcard-page",
+    "id": "home-service",
     "keyword": "Feature",
-    "uri": "src/test/Resources/features/GiftCardsPage.feature",
+    "uri": "src/test/Resources/features/HomeServiceDoorInstallation.feature",
     "tags": []
   }
 ]
