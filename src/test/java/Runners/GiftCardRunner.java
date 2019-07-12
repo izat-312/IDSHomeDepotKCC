@@ -10,7 +10,8 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/cucumber","json:target/report.json"},
         features = "src/test/Resources/features",
         glue = "StepDefinitions",
-        tags = "@gifts"
+        tags = "@gifts",
+        dryRun = false
 )
 public class GiftCardRunner extends AbstractTestNGCucumberTests {
 

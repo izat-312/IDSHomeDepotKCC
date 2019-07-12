@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import utils.Driver;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class AllDepartmentSteps {
@@ -18,7 +20,7 @@ public class AllDepartmentSteps {
     private static Actions action;
 
 
-    @Given("Home Depot web app is up")
+    @Given("^Home Depot web app is up$")
     public void home_Depot_web_app_is_up() {
         driver = Driver.getMyCurrentDriver("chrome");
         driver = new ChromeDriver();
@@ -27,20 +29,22 @@ public class AllDepartmentSteps {
         driver.get("https://www.homedepot.com/");
     }
 
-    @When("user hover overs All Departments menu")
+    @When("^user hover overs All Departments menu$")
     public void user_hover_overs_All_Departments_menu() throws InterruptedException {
         WebElement alldep = driver.findElement(By.xpath("//a[text()='All Departments']"));
         action.moveToElement(alldep).build().perform();
     }
 
-    @Then("user sees (.+) in the drop down list")
+    @Then("^user sees \"(.+)\" in the drop down list$")
     public void user_sees_Appliances_in_the_drop_down_list(String string) throws InterruptedException {
         Thread.sleep(1000);
         WebElement element = driver.findElement(By.xpath(returnStr(string)));
         System.out.println(element.getText());
+        List<List<String>> namee = new LinkedList<>();
+        namee.get(0).get(0);
 
         Thread.sleep(2000);
-//        driver.quit();
+        driver.quit();
     }
 
     private static String returnStr(String string) {
